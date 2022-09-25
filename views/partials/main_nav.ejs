@@ -1,0 +1,18 @@
+<!-- navigation bar which uses bootstrap -->
+<div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+       
+        <img src="/images/logo_s.png" class="bi me-2" width="80" height="80"/>
+        <span class="fs-4">Yi-Cheng Kuo Portfolio</span>
+      </a>
+
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="/" class="nav-link <% if (title == "Home") {%> active <% } %> </a>">Home</a></li>
+        <li class="nav-item"><a href="about-me" class="nav-link <% if (title == "About Me") {%> active <% } %>">About Me</a></li>
+        <li class="nav-item"><a href="projects" class="nav-link <% if (title == "Projects") {%> active <% } %>">Projects</a></li>
+        <li class="nav-item"><a href="services" class="nav-link <% if (title == "Services") {%> active <% } %>">Services</a></li>
+        <li class="nav-item"><a href="contact-me" class="nav-link <% if (title == "Contact Me") {%> active <% } %>">Contact Me</a></li>
+      </ul>
+    </header>
+</div>
