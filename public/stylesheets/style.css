@@ -3,11 +3,35 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
-
+p{
+  font-size: 1.2em;
+  padding-top: 16px;
+  padding-bottom: 4px;
+  color: darkslategray;
+}
 a {
   color: #00B7FF;
 }
 
 .custom-padding {
-  padding: 32px;
+  padding: 16pt;
+}
+
+.mission{
+  font-size: 1.6em;
+  font-weight: 600;
+  line-height: 2.1em;
+  padding-top: 16px;
+  padding-bottom: 4px;
+}
+
+.text_blue{
+  font-weight: 900;
+  color: rgb(48, 74, 244);
+}
+
+.welcome{
+  font-size: 1.8em;
+  font-weight: 900;
+  color: rgb(173, 33, 38);
 }
