@@ -1,9 +1,17 @@
+/**
+  Student Number : 301181514
+  Student Name: Yi-Cheng Kuo
+  Assignment : 1
+  Date: 2022-09-22
+**/
 /** css **/
-/** common **/
+
+/** common component **/
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
+
 p{
   font-size: 1.2em;
   padding-top: 16px;
@@ -40,6 +48,7 @@ a {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: rgb(35, 63, 63);
 }
+
 /** home page **/
 .welcome{
   font-size: 1.8em;
@@ -54,6 +63,7 @@ a {
   padding-top: 16px;
   padding-bottom: 4px;
 }
+
 /** about-me page **/
 .about_me{
   font-size: 1.2em;
@@ -61,6 +71,7 @@ a {
   padding-top: 16px;
   padding-bottom: 4px;
 }
+
 /** contact-me page **/
 .text_{
   font-weight: 900;
