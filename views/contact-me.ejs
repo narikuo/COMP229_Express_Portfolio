@@ -1,8 +1,10 @@
-
+<!-- importing header and main navigation -->
+<%- include partials/header.ejs %>
+<%- include partials/main_nav.ejs %>
 <!-- main content of contact me page-->
 <div class="container">
     <div class="row custom-padding">
-        <h1><%= title %></h1>
+        <h1><%= title %> - T2</h1>
         <div class="row">
             <div class="col">
                 <p class="fs-5">
@@ -30,7 +32,7 @@
                     
                     <div class="mb-3">
                         <label for="yourPhoneInput" class="form-label">Contact Phone</label>
-                        <input type="text" class="form-control" id="yourPhoneInput" name="yourPhoneInput" placeholder="xxx-xxx-xxxxx">
+                        <input type="text" class="form-control" id="yourPhoneInput" name="yourPhoneInput">
                     </div>
                     <div class="mb-3">
                         <label for="messageTextarea" class="form-label">Message</label>
@@ -49,3 +51,6 @@
         
     </div>
 </div>
+
+<!-- importing footer -->
+<%- include partials/footer.ejs %>

@@ -21,7 +21,7 @@ router.get('/services', function(req, res, next) {
 });
 
 router.get('/contact-me', function(req, res, next) {
-  res.render('index', { title: 'Contact Me' });
+  res.render('contact-me', { title: 'Contact Me' });
 });
 
 //Get form data from contact me
