@@ -6,7 +6,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-
+// create an express app
 var app = express();
 
 // view engine setup
@@ -17,6 +17,8 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+// use the express-static middleware
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);

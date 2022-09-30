@@ -1,11 +1,28 @@
 <!-- main content of about me page-->
 <div class="container">
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <p>
-        I am Yi-Cheng Kuo, you can call me Jerry...
-    </p>
-    <div>
-        <a href="/assets/resume_yicheng_kuo.pdf" target="_blank">Resume</a>
+    <div class="row custom-padding">
+        <div class="col">
+            <h1><%= title %></h1>
+            <p class="about_me">
+                Hello, I'm Yi-cheng Kuo. You can call me, <span class="welcome">Jerry</span><br/>
+                I am currenctly studying Software Engineering Technology - <br/>
+                <span class="text_blue">Artificial Intelligence</span> at Centennial College.
+            </p>
+            <p class="about_me">
+                Around 10+ years of experience as a Software Developer with rich experience designing, developing, testing, and maintaining Android and iOS applications in the health, education and IoT industry, and years on Web applications for Business Process Management.
+            </p>
+            <p>You can connect with me <br/>
+                E-mail: <a href="mailto:kyicheng@my.centennialcollege.ca" target="_blank">kyicheng@my.centennialcollege.ca</a> 
+            </p>
+            <div>
+                <button type="button" class="btn btn-primary" onclick="window.location.href='about-me';"><span class="bi-file-earmark-person"></span> Resume</button>
+                <button type="button" class="btn btn-primary" onclick="window.location.href='https://www.linkedin.com/in/yi-cheng-kuo/';"><i class="bi-linkedin"></i> Linkedin</button>
+            </div>
+        </div>
+        <div class="col">   
+            <img src="/images/personal_photo01.jpg" class="rounded img-fluid" alt="Travel in Toronto City" >
+        </div>
+        
+        
     </div>
 </div>

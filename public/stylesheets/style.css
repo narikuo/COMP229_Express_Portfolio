@@ -1,4 +1,5 @@
 /** css **/
+/** common **/
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -7,14 +8,39 @@ p{
   font-size: 1.2em;
   padding-top: 16px;
   padding-bottom: 4px;
+  line-height: 1.5em;
+  color: darkslategray;
+}
+
+li{
+  font-size: 1.2em;
+  line-height: 1.4em;
   color: darkslategray;
 }
 a {
-  color: #00B7FF;
+  color: #0980ae;
+}
+.text_blue{
+  font-weight: 900;
+  color: rgb(48, 74, 244);
 }
 
 .custom-padding {
   padding: 16pt;
+}
+
+.web_title{
+  font-size: 2.5em;
+  line-height: 1.4em;
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: rgb(35, 63, 63);
+}
+/** home page **/
+.welcome{
+  font-size: 1.8em;
+  font-weight: 900;
+  color: rgb(173, 33, 38);
 }
 
 .mission{
@@ -24,14 +50,18 @@ a {
   padding-top: 16px;
   padding-bottom: 4px;
 }
-
-.text_blue{
+/** about-me page **/
+.about_me{
+  font-size: 1.2em;
+  line-height: 1.6em;
+  padding-top: 16px;
+  padding-bottom: 4px;
+}
+/** contact-me page **/
+.text_{
   font-weight: 900;
   color: rgb(48, 74, 244);
 }
 
-.welcome{
-  font-size: 1.8em;
-  font-weight: 900;
-  color: rgb(173, 33, 38);
-}
+
+

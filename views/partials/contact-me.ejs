@@ -1,33 +1,47 @@
 
 <!-- main content of contact me page-->
 <div class="container">
-    <h1><%= title %></h1>
-    <div class="row">
-        <div class="column">
-          <form >
-            <li>
-                <label for="fname">First Name</label>
-                <input type="text" id="fname" name="firstname" placeholder="Your first name..">
-            </li>
-            <li>
-                <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-            </li>
-            <li><label for="email">Email ID</label>
-                <input type="text" id="email" name="email" placeholder="Your email id.."></li>
-            <li><label for="phnumber">Contact Number</label>
-                <input type="text" id="phnumber" name="phnumber" placeholder="Your contact number.."></li>
-            <li>
-                <label for="subject">Subject</label>
-                <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
-                <a href="/"> 
-            </li>
-            <li>
-                <input type="button" value = "Submit" > </a>
-            </li>
-               
-          </form>
+    <div class="row custom-padding">
+        <h1><%= title %></h1>
+        <div class="row">
+            <div class="col">
+                <p class="fs-5">
+                    Please get in touch with me if you have any question or need service. 
+                </p>
+                <ul>
+                    <li style="list-style-type: none;"><i class="bi-geo-alt"></i> Scarborough, Toronto</li>
+                    <li style="list-style-type: none;"><i class="bi-envelope"></i> narikuo@gmail.com</li>
+                    <li style="list-style-type: none;"><i class="bi-telephone"></i> 437-981-5996</li>
+                </ul>
+                
+                <hr/>
+                <form action="/" method="get">
+                    <div class="mb-3">
+                        <label for="yourNameInput" class="form-label">Your Name</label>
+                        <input type="text" class="form-control" id="yourNameInput">
+                    </div>
+                    <div class="mb-3">
+                        <label for="yourMailInput" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="yourMailInput" placeholder="name@example.com">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="yourPhoneInput" class="form-label">Contact Phone</label>
+                        <input type="text" class="form-control" id="yourPhoneInput" placeholder="xxx-xxx-xxxxx">
+                    </div>
+                    <div class="mb-3">
+                        <label for="messageTextarea" class="form-label">Message</label>
+                        <textarea class="form-control" id="messageTextarea" rows="3"></textarea>
+                    </div>
+                    <div class="col-auto">
+                        <button type="submit" class="btn btn-primary mb-3 btn-lg">Send to me</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col">   
+                <img src="/images/toronto_city.jpg" class="rounded img-fluid" alt="Travel in Toronto City" >
+            </div>
         </div>
-    </div>
         
+    </div>
 </div>
