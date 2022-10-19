@@ -1,0 +1,37 @@
+<!--
+  Student Number : 301181514
+  Student Name: Yi-Cheng Kuo
+  Assignment : 1
+  Date: 2022-09-22
+-->
+<!-- importing header and main navigation -->
+<%- include partials/header.ejs %>
+<%- include partials/main_nav.ejs %>
+<!-- main content of contact me page-->
+<div class="container">
+    <div class="row custom-padding">
+        <h1><%= title %></h1>
+        <br />
+        <table class="table table-bordered table-striped table-hover">
+            <!--HEader row-->
+            <tr>
+              <th class="text-center">Contact Name</th>
+              <th class="text-center">Contact Number</th>
+              <th class="text-center">E-mail</th>
+            </tr>
+    
+            <!--Repetable Templet row-->
+            <% for (let count=0; count<ContactList.length; count++){%>
+              <tr>
+                <td class="text-centre "><%=ContactList[count].contact_name %></td>
+                <td class="text-centre "><%=ContactList[count].contact_number %></td>
+                <td class="text-centre "><%=ContactList[count].email %></td>
+              </tr>
+            <%}%>
+          </table>
+        
+    </div>
+</div>
+
+<!-- importing footer -->
+<%- include partials/footer.ejs %>
