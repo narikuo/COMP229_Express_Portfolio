@@ -2,36 +2,45 @@ var express = require('express');
 var router = express.Router();
 
 var parseUrl = require('body-parser')
+let indexController = require("../controllers/index");
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Home' });
-});
+router.get("/", indexController.displayHomepage);
 
-router.get('/about-me', function(req, res, next) {
-  res.render('index', { title: 'About Me' });
-});
+/* GET home page. */
+router.get("/home", indexController.displayHomepage);
 
-router.get('/projects', function(req, res, next) {
-  res.render('index', { title: 'Projects' });
-});
+/* GET About Us page. */
+router.get("/about-me", indexController.displayaboutpage);
 
-router.get('/services', function(req, res, next) {
-  res.render('index', { title: 'Services' });
-});
+/* GET Products page. */
+router.get("/projects", indexController.displayproductpage);
 
-router.get('/contact-me', function(req, res, next) {
-  res.render('contact-me', { title: 'Contact Me' });
-});
+/* GET Services page. */
+router.get("/services", indexController.displayservicespage);
 
-//Get form data from contact me
-router.post('/', function(req, res, next) {
-  console.log('-----> Message Form request: \nName: ', req.body.yourNameInput,
-                ', Mail: ', req.body.yourMailInput,
-                ', Phone: ', req.body.yourPhoneInput,
-                ', \nMessage: ', req.body.messageTextarea)
-  res.render('index', { title: 'Home' });
-  
-})
+/* GET Contact ME page. */
+router.get("/contact-me", indexController.displayContactpage);
+
+/* POST Contact ME page. */
+router.post("/contact-me", indexController.processContactPage);
+
+//for Login process
+/* GET Route for displaying the Login page */
+router.get("/login", indexController.displayLoginPage);
+
+/* POST Route for processing the Login page */
+router.post("/login", indexController.processLoginPage);
+
+/* GET Route for displaying the Register page */
+router.get("/register", indexController.displayRegisterPage);
+
+/* POST Route for processing the Register page */
+router.post("/register", indexController.processRegisterPage);
+
+/* GET to perform UserLogout */
+router.get("/logout", indexController.performLogout);
+
+
 
 module.exports = router;

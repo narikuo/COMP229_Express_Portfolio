@@ -1,0 +1,55 @@
+<!--
+  Student Number : 301181514
+  Student Name: Yi-Cheng Kuo
+  Assignment : 2
+  Date: 2022-10-20
+-->
+<!-- importing header and main navigation -->
+<%- include ../partials/header.ejs %>
+<%- include ../partials/main_nav.ejs %>
+<!-- main content of contact me page-->
+<div class="container">
+    <div class="row custom-padding">
+        <h1><%= title %> List</h1>
+        <a href="/business/add" class="btn btn-primary" role="button">
+            <i class ="fas fa-plus-circle"></i> Add new contact </a>
+        <div>.</div>
+        <table class="table table-bordered table-striped table-hover">
+            <!--HEader row-->
+            <tr>
+              <th class="text-center">Contact Name</th>
+              <th class="text-center">Contact Number</th>
+              <th class="text-center">E-mail</th>
+              <th class="text-center">Edit</th>
+              <th class="text-center">Delete</th>
+            </tr>
+    
+            <!--Repetable Templet row-->
+            <% for (let count=0; count<ContactList.length; count++){%>
+              <tr>
+                <td class="text-centre "><%=ContactList[count].contact_name %></td>
+                <td class="text-centre "><%=ContactList[count].contact_number %></td>
+                <td class="text-centre "><%=ContactList[count].email %></td>
+
+                <td class="text-center col-1">
+                    <a href="/business/edit/<%= ContactList[count]._id %>" class="btn btn-primary btn-sm">
+                    <i class="fas fa-pencil-alt"></i> Edit</a>
+                </td>
+                <td class="text-center col-1">
+                    <a href="/business/delete/<%= ContactList[count]._id %>" class="btn btn-danger btn-sm">
+                    <i class="fas fa-trash-alt"></i> Delete</a>
+                </td>
+
+
+              </tr>
+
+
+
+            <%}%>
+          </table>
+        
+    </div>
+</div>
+
+<!-- importing footer -->
+<%- include ../partials/footer.ejs %>
