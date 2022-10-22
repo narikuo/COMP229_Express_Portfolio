@@ -1,0 +1,26 @@
+<!--
+  Student Number : 301181514
+  Student Name: Yi-Cheng Kuo
+  Assignment : 2
+  Date: 2022-10-20
+-->
+<!-- importing header and main navigation -->
+<%- include partials/header.ejs %>
+<%- include partials/main_nav.ejs %>
+
+<!-- if statement to check which page is opened -->
+<% if (title == "Home") { %>
+  <%- include partials/home.ejs %>
+    <% } else %>
+<% if (title == "About Me") { %>
+      <%-include partials/about-me.ejs %>
+        <% } %>
+<% if (title == "Projects") { %>
+      <%- include partials/projects.ejs %>
+        <% } %>
+<% if (title == "Services") { %>
+      <%- include partials/services.ejs %>
+        <% } %>
+
+<!-- importing footer -->
+<%- include partials/footer.ejs %>

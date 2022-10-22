@@ -1,8 +1,8 @@
 /**
   Student Number : 301181514
   Student Name: Yi-Cheng Kuo
-  Assignment : 1
-  Date: 2022-09-22
+  Assignment : 2
+  Date: 2022-10-20
 **/
 /** css **/
 
@@ -39,6 +39,14 @@ a {
 
 .custom-padding {
   padding: 16pt;
+}
+
+.custom-padding-buttom {
+  padding-bottom: 16pt;
+}
+
+.custom-margin-top {
+  margin-top: 16pt;
 }
 
 .web_title{
