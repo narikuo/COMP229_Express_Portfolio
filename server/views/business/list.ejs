@@ -11,17 +11,17 @@
 <div class="container">
     <div class="row custom-padding">
         <h1><%= title %> List</h1>
-        <a href="/business/add" class="btn btn-primary" role="button">
-            <i class ="fas fa-plus-circle"></i> Add new contact </a>
-        <div>.</div>
+        
         <table class="table table-bordered table-striped table-hover">
             <!--HEader row-->
             <tr>
               <th class="text-center">Contact Name</th>
               <th class="text-center">Contact Number</th>
               <th class="text-center">E-mail</th>
+              <% if(typeof displayName == 'string' && displayName) { %>
               <th class="text-center">Edit</th>
               <th class="text-center">Delete</th>
+              <% } %> 
             </tr>
     
             <!--Repetable Templet row-->
@@ -30,7 +30,7 @@
                 <td class="text-centre "><%=ContactList[count].contact_name %></td>
                 <td class="text-centre "><%=ContactList[count].contact_number %></td>
                 <td class="text-centre "><%=ContactList[count].email %></td>
-
+                <% if(typeof displayName == 'string' && displayName) { %>
                 <td class="text-center col-1">
                     <a href="/business/edit/<%= ContactList[count]._id %>" class="btn btn-primary btn-sm">
                     <i class="fas fa-pencil-alt"></i> Edit</a>
@@ -39,14 +39,15 @@
                     <a href="/business/delete/<%= ContactList[count]._id %>" class="btn btn-danger btn-sm">
                     <i class="fas fa-trash-alt"></i> Delete</a>
                 </td>
-
-
+                <% } %> 
               </tr>
-
-
-
             <%}%>
           </table>
+
+          <% if(typeof displayName == 'string' && displayName) { %>
+            <a href="/business/add" class="btn btn-primary" role="button">
+                <i class ="fas fa-plus-circle"></i> Add new contact </a>  
+          <% } %> 
         
     </div>
 </div>

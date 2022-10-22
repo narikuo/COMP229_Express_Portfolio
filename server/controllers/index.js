@@ -85,7 +85,7 @@ module.exports.displayHomepage = (req, res, next) => {
         if (err) {
           return next(err);
         }
-        return res.redirect("/book-list");
+        return res.redirect("/business");
       });
     })(req, res, next);
   };
@@ -110,6 +110,7 @@ module.exports.displayHomepage = (req, res, next) => {
       //password: req.body.password
       email: req.body.email,
       displayName: req.body.displayName,
+      gender: req.body.genderSelect,
     });
   
     User.register(newUser, req.body.password, (err) => {
@@ -131,7 +132,6 @@ module.exports.displayHomepage = (req, res, next) => {
         // if no error exists, then registration is successful
   
         // redirect the user and authenticate them
-  
         return passport.authenticate("local")(req, res, () => {
           res.redirect("/business");
         });

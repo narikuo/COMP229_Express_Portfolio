@@ -1,12 +1,10 @@
 <!-- navigation bar which uses bootstrap -->
-<div class="container">
-    <header class="d-flex flex-wrap justify-content-center py-1 mb-4 border-bottom">
+<div class="container border-bottom" style="margin-bottom: 16px;">
+    <header class="d-flex flex-wrap justify-content-center ">
       <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-       
         <img src="/images/code.png" class="bi me-4" width="60" height="60"/>
         <span class="web_title">Yi-Cheng Kuo</span>
       </a>
-
       <ul class="nav nav-pills">
         <li class="nav-item"><a href="/" class="nav-link <% if (title == "Home") {%> active <% } %> </a>">Home</a></li>
         <li class="nav-item"><a href="about-me" class="nav-link <% if (title == "About Me") {%> active <% } %>">About Me</a></li>
@@ -15,5 +13,23 @@
         <li class="nav-item"><a href="business" class="nav-link <% if (title == "Business Contact") {%> active <% } %>">Business</a></li>
         <li class="nav-item"><a href="contact-me" class="nav-link <% if (title == "Contact Me") {%> active <% } %>">Contact Me</a></li>
       </ul>
+
     </header>
+    <div class="row">
+      <div class="col">
+        <ul class="nav float-end">
+          <% if(typeof displayName == 'string' && displayName) { %>
+            <li class="navbar-text text_blue">Welcome, <%= displayName %></li>
+            <li class="nav-item"><a href="/logout" class="nav-link">
+              <i class="fas fa-lg fa-sign-out-alt"></i> Logout</a></li>
+          <% } else { %>
+            <li class="nav-item"><a href="/login" class="nav-link">
+              <i class="fas fa-lg fa-sign-in-alt"></i> Login</a></li>
+          <% } %>
+        </ul>
+      </div>
+      
+    </div>
+    
+    
 </div>

@@ -6,6 +6,54 @@
     <div class="row custom-padding">
         <h1><%= title %> - Edit</h1>
         <br />
+        <form class="form" method="post">
+            <div class="from-group custom-padding-buttom">
+                <label for="nameTextField" class="form-label">Contact Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nameTextField"
+                  placeholder="Name"
+                  name="contact_name"
+                  value="<%= contact.contact_name %>"
+                  required
+                />
+            </div>
+      
+            <div class="from-group custom-padding-buttom">
+                <label for="numberTextField" class="form-label">Contact Number</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="numberTextField"
+                  placeholder="XXX-XXX-XXXX"
+                  name="contact_number"
+                  value="<%= contact.contact_number %>"
+                  required
+                />
+            </div>
+      
+            <div class="from-group custom-padding-buttom">
+                <label for="emailTextField" class="form-label">E-mail</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="emailTextField"
+                  placeholder="Email address"
+                  name="email"
+                  value="<%= contact.email %>"
+                  required
+                />
+            </div>
+    
+            <button class="btn btn-primary" type="submit">
+              <i class="fas fa-edit"></i>Submit
+            </button>
+    
+            <a href="/business" class="btn btn-light">
+              <i class="fas fa-undo"></i>Cancel
+            </a>
+          </form>
     </div>
 </div>
 

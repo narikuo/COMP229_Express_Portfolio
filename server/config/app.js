@@ -44,6 +44,7 @@ app.use(cookieParser());
 
 // use the express-static middleware
 app.use(express.static(path.join(__dirname, '../../public')));
+app.use(express.static(path.join(__dirname, "../../node_modules")));
 
 //setup express session
 app.use(

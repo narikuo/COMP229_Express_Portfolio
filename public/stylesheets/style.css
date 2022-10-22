@@ -41,6 +41,14 @@ a {
   padding: 16pt;
 }
 
+.custom-padding-buttom {
+  padding-bottom: 16pt;
+}
+
+.custom-margin-top {
+  margin-top: 16pt;
+}
+
 .web_title{
   font-size: 2.5em;
   line-height: 1.4em;
