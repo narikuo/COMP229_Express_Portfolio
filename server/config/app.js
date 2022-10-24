@@ -1,3 +1,4 @@
+//install 3rd party packages
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -9,24 +10,32 @@ let session = require("express-session");
 let passport = require("passport");
 let passportLocal = require("passport-local");
 let localStratergy = passportLocal.Strategy;
+
+//model for authenticaiton messaging and error management
 let flash = require("connect-flash");
 
-////--- database setbup
+//--- database setbup
 let mongoose = require("mongoose");
 let DB = require("./db");
 
-///////add -> point mongoose to the DB
+// -> point mongoose to the DB
 mongoose.connect(DB.URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true});
 
-let mongodb = mongoose.connection;
-mongodb.on("error", console.error.bind(console, "connection error: "));
-mongodb.once("open", () =>{
-  console.log("Database connected");
+let mongodbConnect = mongoose.connection;
+mongodbConnect.on("error", console.error.bind(console, "connection error: "));
+mongodbConnect.once("connected", () =>{
+  console.log("Database connected with mongodb");
+});
+mongodbConnect.once("open", () =>{
+  console.log("Database mongodb - OPEN");
+});
+mongodbConnect.once("disconnected", () =>{
+  console.log("Mongodb disconnected");
 });
 
-
+//for routing
 var indexRouter = require('../routes/index');
 var usersRouter = require('../routes/users');
 var contactsRouter = require('../routes/business_contact');
